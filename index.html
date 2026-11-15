@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#180b20">
+  <title>For My Favourite Person ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="page">
+    <p class="eyebrow">A LITTLE WORLD MADE JUST FOR YOU</p>
+    <h1>Happy Birthday,<br><span>My Love</span> 💗</h1>
+    <p class="intro">I wrapped a few feelings into little gifts.<br>Tap each box and discover what's inside.</p>
+
+    <section class="gift-grid" aria-label="Birthday gifts">
+      <button class="gift-card" data-gift="poem">
+        <span class="gift-emoji">🎁</span><span class="gift-name">A little poem</span><span class="gift-hint">Open me</span>
+      </button>
+      <button class="gift-card" data-gift="reasons">
+        <span class="gift-emoji">🎀</span><span class="gift-name">Why you're special</span><span class="gift-hint">Open me</span>
+      </button>
+      <button class="gift-card" data-gift="promise">
+        <span class="gift-emoji">💝</span><span class="gift-name">A promise</span><span class="gift-hint">Open me</span>
+      </button>
+      <button class="gift-card" data-gift="memory">
+        <span class="gift-emoji">🧸</span><span class="gift-name">A tiny surprise</span><span class="gift-hint">Open me</span>
+      </button>
+      <button class="gift-card special" data-gift="letter">
+        <span class="gift-emoji">💌</span><span class="gift-name">My heart's letter</span><span class="gift-hint">Save this for last</span>
+      </button>
+    </section>
+
+    <div class="progress-wrap">
+      <span id="progressText">0 of 5 gifts opened</span>
+      <div class="progress"><div id="progressBar"></div></div>
+    </div>
+    <p class="footer">Made with all my love, just for you ✨</p>
+  </main>
+
+  <div class="modal" id="giftModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-icon" id="modalIcon">💗</div>
+      <p class="modal-kicker">A GIFT FROM MY HEART</p>
+      <h2 id="modalTitle">A little surprise</h2>
+      <div class="message" id="modalMessage"></div>
+      <button class="next-button" id="nextGift">Back to my gifts ✨</button>
+    </div>
+  </div>
+
+  <div class="final-screen" id="finalScreen" aria-hidden="true">
+    <div class="final-content">
+      <div class="big-heart">💖</div>
+      <h2>One last thing...</h2>
+      <p>You are not just a part of my life.<br>You make my life feel more beautiful.</p>
+      <p class="final-line">Happy Birthday, my favourite person. I love you! ❤️</p>
+      <button id="finalClose" class="next-button">Keep this love close 💕</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

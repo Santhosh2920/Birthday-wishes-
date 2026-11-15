@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+:root{--pink:#ff83b5;--cream:#fff0f6;--muted:#d9bfd0}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--cream);font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 15% 10%,#54204e 0,transparent 38%),radial-gradient(ellipse at 90% 80%,#382052 0,transparent 40%),linear-gradient(135deg,#140b20,#21102d 55%,#100a1b);overflow-x:hidden}
+.stars{position:fixed;inset:0;pointer-events:none;opacity:.45;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#ffb8d5 1px,transparent 1px);background-size:79px 79px,113px 113px;background-position:0 0,35px 42px}
+.page{position:relative;width:min(900px,92%);margin:auto;padding:62px 0 30px;text-align:center}
+.eyebrow,.modal-kicker{letter-spacing:3px;font-size:.68rem;font-weight:700;color:#ffb6d2}
+h1{font:800 clamp(2.7rem,8vw,5.3rem)/1.05 'Playfair Display',serif;margin:18px 0;color:#fff}
+h1 span{color:var(--pink);text-shadow:0 0 30px #ff65a866}
+.intro{color:var(--muted);line-height:1.8;font-size:1rem;margin:20px 0 38px}
+.gift-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;max-width:760px;margin:0 auto}
+.gift-card{min-height:180px;border:1px solid #ffffff24;border-radius:22px;background:linear-gradient(145deg,#ffffff16,#ffffff08);color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;cursor:pointer;box-shadow:0 12px 35px #0003;transition:transform .25s,border-color .25s,background .25s;backdrop-filter:blur(8px)}
+.gift-card:hover,.gift-card:focus-visible{transform:translateY(-8px) scale(1.025);border-color:#ff9fc8;background:linear-gradient(145deg,#ff83b52b,#ffffff10);outline:none}
+.gift-card.opened{border-color:#ff83b5;background:#ff83b51c}
+.gift-emoji{font-size:3.4rem;filter:drop-shadow(0 8px 12px #0004);transition:transform .3s}
+.gift-card:hover .gift-emoji{transform:rotate(-8deg) scale(1.12)}
+.gift-name{font-weight:700;font-size:.98rem}
+.gift-hint{font-size:.76rem;color:#d9b9cc}
+.special{grid-column:2}
+.progress-wrap{max-width:340px;margin:32px auto 0;color:#d9bfd0;font-size:.8rem}
+.progress{height:6px;border-radius:20px;background:#ffffff20;margin-top:10px;overflow:hidden}
+#progressBar{height:100%;width:0;background:linear-gradient(90deg,#ff79ad,#ffd0e2);border-radius:20px;transition:width .4s}
+.footer{margin-top:45px;color:#bda3b9;font-size:.8rem}
+.modal,.final-screen{position:fixed;inset:0;z-index:5;display:grid;place-items:center;padding:20px;background:#090510c9;backdrop-filter:blur(10px);opacity:0;visibility:hidden;transition:.25s}
+.modal.show,.final-screen.show{opacity:1;visibility:visible}
+.modal-card,.final-content{position:relative;width:min(480px,100%);padding:38px 28px 30px;border:1px solid #ffb5d044;border-radius:28px;text-align:center;background:linear-gradient(145deg,#482342,#21152f);box-shadow:0 25px 90px #0008;transform:translateY(15px);transition:transform .25s}
+.show .modal-card,.show .final-content{transform:translateY(0)}
+.close{position:absolute;right:17px;top:12px;border:0;background:none;color:#fff;font-size:2rem;cursor:pointer}
+.modal-icon{font-size:3rem;margin-bottom:10px}
+.modal-kicker{font-size:.62rem}
+.modal h2,.final-content h2{font:700 2rem 'Playfair Display',serif;margin:10px 0 18px}
+.message{white-space:pre-line;color:#f9e8f1;line-height:1.9;font-size:1rem}
+.next-button{margin-top:25px;padding:13px 22px;border:0;border-radius:30px;background:linear-gradient(90deg,#ff75aa,#ffb3cf);color:#34152a;font-weight:700;cursor:pointer;box-shadow:0 8px 25px #ff75aa33}
+.final-content p{line-height:1.9;color:#f7dfeb}
+.big-heart{font-size:4rem;animation:beat 1s infinite}
+.final-line{font-weight:700;color:#ffb4d0!important}
+@keyframes beat{50%{transform:scale(1.16)}}
+@media(max-width:620px){.page{padding-top:42px}.gift-grid{grid-template-columns:repeat(2,1fr);gap:12px}.gift-card{min-height:155px}.gift-emoji{font-size:2.8rem}.special{grid-column:1/-1}.intro{font-size:.92rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
